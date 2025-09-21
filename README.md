@@ -25,3 +25,22 @@
 docker compose up --build
 ```
 ---
+## Run Tests
+
+```bash
+PYTHONPATH=. pytest -q --disable-warnings -s
+```
+---
+## Project Structure
+
+```bash
+app/
+  api/        # routers
+  views/      # orchestrates services
+  services/   # business logic
+  db/         # repository + session
+  models/     # ORM + Pydantic schemas
+  validators/ # input validators
+tests/        # unit + integration tests
+```
+---
